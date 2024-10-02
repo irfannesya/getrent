@@ -1,27 +1,34 @@
+// src/App.js
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import NavComponent from './components/navbar/Navbar';
 import BuildingList from './components/buildingList';
-import '../src/styles.css';
-
-const App = () => {
-  const [buildings, setBuildings] = useState([]);
+import RegisterModal from './components/Auth/RegisterModal';
+function App() {
+  const [buildings] = useState([]);
+  const [links] = useState([
+    { href: "#home", label: "Home" },
+    { href: "#link", label: "Link" },
+    { href: "#action/3.1", label: "Action" },
+    { href: "#action/3.2", label: "Another action" },
+    { href: "#action/3.3", label: "Something" },
+  ]);
 
   useEffect(() => {
-    axios.get('/api/buildings')
-      .then(response => {
-        setBuildings(response.data);
-      })
-      .catch(error => {
-        console.error('Error fetching buildings:', error);
-      });
+    // Fetch buildings or other data
+    // Example:
+    // setBuildings([{ id: 1, name: 'Building 1' }, { id: 2, name: 'Building 2' }]);
   }, []);
 
   return (
-    <div className="app">
-      <h1>List of Buildings that can be rented</h1>
-      <BuildingList buildings={buildings} />
+    <div>
+      <NavComponent links={links} buildings={buildings} />
+      <div className="container mt-3">
+
+        <BuildingList buildings={buildings} />
+        <RegisterModal />
+      </div>
     </div>
   );
-};
+}
 
 export default App;

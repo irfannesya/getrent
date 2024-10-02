@@ -6,7 +6,7 @@ import '../BuildingList.css';
 const BuildingList = () => {
     const [buildings, setBuildings] = useState([]);
     const [selectedBuilding, setSelectedBuilding] = useState(null);
-    const [selectedImageIndex, setSelectedImageIndex] = useState(0); // Tambahkan definisi variabel
+    const [setSelectedImageIndex] = useState(0); // Tambahkan definisi variabel
 
     useEffect(() => {
         // Code to fetch building data from backend
@@ -71,6 +71,7 @@ const BuildingList = () => {
                         <p><strong>Rent:</strong> {selectedBuilding.rent}</p>
                         <button onClick={handleCloseModal}
                         >Close</button>
+                        
                     </div>
                 )}
             </Modal>

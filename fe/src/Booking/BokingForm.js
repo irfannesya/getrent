@@ -13,8 +13,9 @@
             <h2>{selectedBuilding.name}</h2>
             <p><strong>Location:</strong> {selectedBuilding.location}</p>
             <p><strong>Rent:</strong> {selectedBuilding.rent}</p>
+            <button onClick={handleBooking}>Book Now</button>
             <button onClick={handleCloseModal}>Close</button>
-            <button onClick={handleBooking}>Book Now</button> {/* Tombol booking */}
+
         </div>
     )}
 </Modal>
