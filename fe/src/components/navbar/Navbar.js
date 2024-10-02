@@ -28,7 +28,6 @@ const NavComponent = () => {
                             <NavDropdown.Item href="#action/3.4">Warehous</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.5">Office</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.6">Shophouse</NavDropdown.Item>
-
                             <NavDropdown.Divider />
                             <NavDropdown.Item href="#action/3.4">
                                 Contack Serivice
